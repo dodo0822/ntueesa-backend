@@ -25,7 +25,7 @@ def csv_to_json(filename):
                 sub = {'name':s,
                        'course':classes}
                 j['subcategories'].append(sub)
-                json_data.append(j)
+            json_data.append(j)
         with open('api/course.json', 'w') as outfile:
             json.dump(json_data, outfile, indent=4)
 
