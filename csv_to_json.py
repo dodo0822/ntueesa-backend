@@ -6,6 +6,7 @@ import json
 
 def csv_to_json(filename):
     if filename == '必修_系訂選修.csv':
+        filename = "data/" + filename
         arr = np.fromiter(codecs.open(filename, encoding="utf-8"), dtype="<U40")
         json_data = []
         size = arr[1:].size
