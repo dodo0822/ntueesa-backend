@@ -2,11 +2,11 @@
 
 The purpose of this api sever is to response to frontend AJAX request and send back EE courses API in various form.
 Current avaliable API are at:
-- All '/api/course': Give you all the courses.
+- All `/api/course`: Give you all the courses.
 
 # For Maintainers
 
-In order to modify course content for future use, you can go into '/data/' and directly modify the csv file you want.
+In order to modify course content for future use, you can go into `/data/` and directly modify the csv file you want.
 After modification, you should use the provided python script to tranfer the csv file into json format.
 ```bash
 $ python csv_to_json.py
@@ -43,7 +43,7 @@ We use python [Flask](http://flask.pocoo.org) framework to setup the webservice.
 ```bash
 $ python main.py
 ```
-And the service is placed on port '7122'.
+And the service is placed on port `7122`.
 
 ## Project Structure
 
