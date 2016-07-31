@@ -19,7 +19,8 @@ def csv_to_json(filename):
         for x in name:
             j = {'name':x,
                  'subcategories':[]}
-            subcategories = np.unique(course[course[:,0] == x][:,1])
+            subcategories, idx = np.unique(course[course[:,0] == x][:,1], return_index=True)
+            subcategories = course[course[:,0] == x][:,1][np.sort(idx)]
             for s in subcategories:
                 classes = course[course[:,1] == s][:,2].tolist()
                 sub = {'name':s,
